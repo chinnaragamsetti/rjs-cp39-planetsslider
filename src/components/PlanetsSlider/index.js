@@ -7,14 +7,10 @@ import './index.css'
 
 const PlanetsSlider = props => {
   const {planetsList} = props
-  const settings = {
-    dots: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
+
   return (
     <div className="slider-container" data-testid="planets">
-      <Slider {...settings}>
+      <Slider>
         {planetsList.map(each => (
           <PlanetsItem eachDetails={each} key={each.id} />
         ))}
